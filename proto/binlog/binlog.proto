@@ -82,4 +82,7 @@ message Binlog {
 
 	// ddl_schema_state is used for DDL Binlog.
     optional int32         ddl_schema_state = 8 [(gogoproto.nullable) = false];
+
+    // ip is the source IP which this binlog generated from.
+    optional bytes ip = 9 [(gogoproto.nullable) = false];
 }
